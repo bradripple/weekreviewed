@@ -5,7 +5,7 @@
 
 functions that execute when a client sends a request. Routes set the url address
 
-```javascript
+```
 // Controller
 const home = (req, res) => {
     res.render('index', { name: 'Archer', age: '25' });
@@ -25,17 +25,25 @@ many different kinds that assist in many different ways
 must install and add to .gitignore so they don't upload to github
 once installed you must import
 
-```javascript
+```
 npm i express // to install
 
 const express = require('express'); // to import
 const app = express();
 ```
+### changing the script in the .JSON file will allow you to run the script from your terminal
+
+```
+scripts:
+
+"start": "node app.js"
+```
+
 ## setting up PORTS
 
 Setting up a server using express 
 
-```javascript
+```
 const PORT = process.env.PORT || 8000;
 
 
@@ -49,7 +57,7 @@ app.listen(PORT, () => {
 EJS allows you to attach a whole html page to render at set route
 Using <%= %> (ice cream cones) to apply javaScript straight to html
 
-```javascript
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -78,7 +86,7 @@ Using <%= %> (ice cream cones) to apply javaScript straight to html
 Essentially the console.log()
 Not typically used in production
 
-```javascript
+```
 const input = (req, res) => {
 
     console.log(req.params);
@@ -90,7 +98,7 @@ const input = (req, res) => {
 
 allows you to send an EJS (html) file to set route
 
-```javascript
+```
 const home = (req, res) => {
     res.render('index', { name: 'Archer', age: '25' });
 };
@@ -98,7 +106,7 @@ const home = (req, res) => {
 
 ## Module exporting
 
-```javascript
+```
 // destructuring
 module.exports = {
     obj,
@@ -114,7 +122,8 @@ module.exports.count = () => {
         console.log(i);
     }
 }
-```javascript
+```
+### using destructuring method will have the export function locate at the bottom of your page. After the functions
 
 ## Module importing
 
@@ -122,6 +131,6 @@ module.exports.count = () => {
 const { beBasic, count } = require('./myModule.js');
 
 const { obj, array, Player } = require('./myModule.js');
+```
 
-
-
+### Important to remember that whenever importing modules, it should be located at the top of your .js 
