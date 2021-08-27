@@ -119,9 +119,14 @@ module.exports.count = () => {
 ## Module importing
 
 ```javascript
+// LOCAL MODULE
 const { beBasic, count } = require('./myModule.js');
 
+// THIRD PARTY MODULE
 const express = require('express');
+
+// CORE MODULE
+const http = require("http");
 
 ```
 
