@@ -95,3 +95,33 @@ const home = (req, res) => {
     res.render('index', { name: 'Archer', age: '25' });
 };
 ```
+
+## Module exporting
+
+```
+// destructuring
+module.exports = {
+    obj,
+    array,
+    isOldEnough,
+    Player
+};
+
+// another way to export
+module.exports.beBasic = () => "That's so fetch!"
+module.exports.count = () => {
+    for (var i = 0; i <= 10; i++) {
+        console.log(i);
+    }
+}
+```
+
+## Module importing
+
+```
+const { beBasic, count } = require('./myModule.js');
+
+const { obj, array, Player } = require('./myModule.js');
+
+
+
