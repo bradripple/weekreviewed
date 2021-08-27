@@ -114,14 +114,14 @@ module.exports.count = () => {
         console.log(i);
     }
 }
-```javascript
+```
 
 ## Module importing
 
-```
+```javascript
 const { beBasic, count } = require('./myModule.js');
 
 const { obj, array, Player } = require('./myModule.js');
 
-
+```
 
